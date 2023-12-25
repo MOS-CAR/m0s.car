@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOS.CAR - Отзывы Клиентов</title>
+    <link rel="stylesheet" href="otziv.css">
+</head>
+<body>
+    <header>
+        <h1 class="animated-header">MOS.CAR - Отзывы Клиентов</h1>
+        <p class="p-header"> Вы можете удостовериться в качетве наших услуг - прочитав отзывы клиентов!</p>
+        <div class="header-underline"></div>
+        <button id="goToHomePageButton">На главную страницу</button>
+    </header>
+
+    <script>
+    document.getElementById('goToHomePageButton').addEventListener('click', function () {
+        window.location.href = 'index.html';
+    });
+    </script>
+
+    <div id="reviews-container">
+        <section class="review">
+            <img src="davidovich.jpg" alt="User 1">
+            <div class="review-content">
+                <h3>Эрик Давидович</h3>
+                <p>Благаодорю серивис MOS.CAR , благадоря им я смог протестировать новую BMW M8 competiton для своего нового виедоролика. ВСЕМ СОВЕТУЮ!!)</p>
+            </div>
+        </section>
+
+        <section class="review">
+            <img src="guram.jpg" alt="User 2">
+            <div class="review-content">
+                <h3>Гурам DSC OFF</h3>
+                <p>Смог найти новую Lamborghini для своего ролика в MOS.CAR! , Рекомендую! 12/10</p>
+            </div>
+        </section>
+
+            <section class="review">
+                <img src="moskva.jpg" alt="User 1">
+                <div class="review-content">
+                    <h3>Госдума РФ</h3>
+                    <p>Выражаем благодарность за широкий выбор бизнес-класс автомобилей!!</p>
+                </div>
+        </section>
+
+    </div>
+
+    <button id="add-review-btn">Добавить отзыв</button>
+
+    <script>
+        document.getElementById('add-review-btn').addEventListener('click', function() {
+            var reviewerName = prompt('Введите ваше имя и фамилию:');
+            var reviewText = prompt('Введите ваш отзыв:');
+            if (reviewerName && reviewText) {
+                var reviewContainer = document.getElementById('reviews-container');
+                var newReview = document.createElement('section');
+                newReview.className = 'review';
+                newReview.innerHTML = '<img src="user.jpg" alt="' + reviewerName + '">' +
+                                      '<div class="review-content">' +
+                                      '<h3>' + reviewerName + '</h3>' +
+                                      '<p>' + reviewText + '</p>' +
+                                      '</div>';
+                reviewContainer.insertBefore(newReview, reviewContainer.firstChild);
+            }
+        });
+    </script>
+</body>
+</html>

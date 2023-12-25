@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование - MOS.CAR</title>
+    <link rel="stylesheet" href="bronirovanie.css">
+</head>
+
+<body>
+    <header>
+        <h1>Бронирование автомобиля</h1>
+        <button id="goToHomePageButton">На главную страницу</button>
+    </header>
+
+    <section class="booking-section">
+        <h2>Бронирование</h2>
+        <form id="booking-form">
+            <label for="username">Имя пользователя:</label>
+            <input type="text" id="username" name="username" required>
+
+            <label for="booking-time">Время бронирования:</label>
+            <input type="datetime-local" id="booking-time" name="booking-time" required>
+
+            <label for="duration">Продолжительность (в минутах):</label>
+            <input type="number" id="duration" name="duration" min="1" required>
+
+            <label for="tariff">Выберите тип автомобиля:</label>
+            <select id="tariff" name="tariff" required>
+                <option value="sportcar">Спорткар</option>
+                <option value="premium">Представительский класс</option>
+            </select>
+
+            <p id="price">Цена: 0 руб.</p>
+
+            <button id="reserveButton">Бронировать</button>
+        </form>
+
+        <div id="mapPopup" class="hidden">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A0ecd66e4121dd66091873d53a019e0d448a768c34339206ae849e28422bbf68b&amp;source=constructor" width="670" height="512" frameborder="0"></iframe>
+        </div>
+
+        <div id="thankYou" class="hidden">
+            <h3>Спасибо за бронирование!</h3>
+            <p>Мы ждем вас в нашем автомобиле)!</p>
+        </div>
+
+        <script src="bronirovanie.js"></script>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 MOS.CAR / все права защищены</p>
+    </footer>
+
+</body>
+
+</html>

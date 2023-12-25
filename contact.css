@@ -1,0 +1,345 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('s680.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: rgb(190, 30, 30);
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    margin-bottom: 0px; 
+}
+
+#goToHomePageButton {
+    position: absolute;
+    left: 45px;
+    top: 40px;
+    background-color: rgb(190, 30, 30);
+    color: #fff;
+    border: 2px solid #a90b0b;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out, border-color 0.3s ease-in-out;
+}
+
+#goToHomePageButton:hover {
+    background-color: #fff;
+    color: #a90b0b;
+    border-color: #a90b0b;
+}
+
+.header-content {
+    flex-grow: 1;
+}
+
+.header-h1 {
+    font-size: 28px;
+    letter-spacing: 2px;
+    margin: 10px 0;
+    animation: slideIn 1s ease-in-out;
+}
+
+.header-p {
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+    animation: fadeIn 1s ease-in-out 0.5s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+main {
+    margin-top: 80px; 
+}
+
+section:first-of-type {
+    margin-top: 60px; 
+}
+
+.logo {
+    background: url('apple-touch-icon.png') center/cover;
+    width: 120px;
+    height: 80px;
+    border-radius: 8px;
+    margin: 5px;
+}
+
+.contact-info {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#myModal {
+    z-index: 1000; 
+}
+
+#addressModal{
+    z-index: 1000;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+}
+
+section {
+    padding: 100px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 0.5s;
+    border-radius: 10px;
+    margin-bottom: 60px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-card {
+    height: 140px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 10px 10px 90px black;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 20px;
+    display: inline-block;
+    transform: translateY(60px);
+    animation: slideIn 0.5s ease-in-out forwards;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.5s ease;
+}
+
+.contact-card:hover {
+    background-color: #939393;
+    transform: translateY(-10px) scale(1.05);
+}
+
+footer {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 1s;
+}
+
+footer {
+    background-color: white;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 1s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.close-btn {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+.address {
+    text-align: center;
+    font-style:oblique;
+    color: #555;
+}
+
+.contact-section h2 {
+    color: #e74c3c;
+}
+
+.contact-section p {
+    font-size: 16px;
+    color: white; 
+}
+
+.map-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 2%; 
+}
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+form {
+    margin-top: 40px;
+}
+
+label {
+    display: block;
+    margin-bottom: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 15px;
+    border: 1px solid #ff6464a5;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 10px 150px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c0392b;
+}
+
+.rules-section {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.rules-section h2 {
+    color: #e74c3c;
+    text-align: center;
+}
+
+.rules-section p {
+    margin-bottom: 15px;
+}
+
+.rules-section ol {
+    list-style-type: decimal;
+    margin-left: 20px;
+}
+
+.rules-section button {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 15px 30px; 
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px; 
+    transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+        }
+.rules-section button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+.rules-section button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    background-color: #e74c3c;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards 1s;
+}

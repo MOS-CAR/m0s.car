@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Контакты - MOS.CAR</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1 class="header-h1">Контакты MOS.CAR</h1>
+            <div class="contact-info">
+                <p class="header-p">Сдесь вы сможите найти и получить все ответы на свои вопросы</p>
+            </div>
+        </div>
+        <button id="goToHomePageButton">На главную страницу</button>
+    </header>
+
+    <script>
+    document.getElementById('goToHomePageButton').addEventListener('click', function () {
+        window.location.href = 'index.html';
+    });
+    </script>
+
+    <section>
+        <div class="contact-card" onclick="showMessage('Служба поддержки', 'Email: support@MOScar.ru   Телефон: +7 123 456 789')">
+            <h2>Служба поддержки</h2>
+        </div>
+
+        <div class="contact-card" onclick="showAddress()">
+            <h2>Адрес офиса</h2>
+        </div>
+
+        <div class="contact-card" id="feedback-form" onclick="showForm()">
+            <h2>Обратная связь</h2>
+        </div>
+
+        <div class="contact-card" onclick="showMessage('Добро пожаловать на страницу с правилами и условиями использования услуг компании каршеринга. Прежде чем начать использовать наши услуги, пожалуйста, ознакомьтесь с нижеследующими правилами: Пользователь должен быть старше 18 лет. При использовании автомобиля обязательно следовать правилам дорожного движения. Не допускается передавать автомобиль третьим лицам без согласования с каршерингом. За каждое использование автомобиля взимается плата в соответствии с тарифами. Пользование автомобилем в пьяном или наркотическом состоянии запрещено. Пользователь обязан вернуть автомобиль в указанное место и время. В случае неполадок с автомобилем немедленно сообщите в службу поддержки. Мы ценим ваше сотрудничество и надеемся, что вы будете следовать этим правилам для обеспечения безопасного и приятного опыта пользования нашими услугами.')">
+            <h2>Права</h2>   
+        </div>
+        <section class="rules-section">
+            <h2>Правила использования услуг каршеринга</h2>
+            <p>Добро пожаловать на страницу с правилами и условиями использования услуг компании каршеринга. Прежде чем начать использовать наши услуги, пожалуйста, ознакомьтесь с нижеследующими правилами:</p>
+            <ol>
+                <li>Пользователь должен быть старше 18 лет.</li>
+                <li>При использовании автомобиля обязательно следовать правилам дорожного движения.</li>
+                <li>Не допускается передавать автомобиль третьим лицам без согласования с каршерингом.</li>
+            </ol>
+            <p>Мы ценим ваше сотрудничество и надеемся, что вы будете следовать этим правилам для обеспечения безопасного и приятного опыта пользования нашими услугами.</p>
+            <center><button onclick="acctptButton()" type="button">Принять условия</button></center>
+        </section>
+    </section>
+    <script async src="contact.js"></script>
+
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeForm()">Закрыть</span>
+            <h2>Обратная связь</h2>
+            <form id="contact-form">
+                <label for="name">Ваше имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Ваш Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="button" onclick="submitForm()">Отправить</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="addressModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeAddress()">Закрыть</span>
+            <h2>Адрес офиса MOS.CAR</h2>
+            <p class="address">г.Москва Пресненская наб., 10, стр.1</p>
+            <div class="map-container">
+                <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A42579f91943f8d364c989b791fa750648f1ddd59cfddba6a66e93d8f4009de29&amp;source=constructor" width="800" height="500" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showMessage(title, content) {
+            alert(title + '\n' + content);
+        }
+
+        function showForm() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "flex";
+        }
+
+        function closeForm() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+            document.getElementById("contact-form").reset();
+        }
+
+        function showAddress() {
+            var addressModal = document.getElementById("addressModal");
+            addressModal.style.display = "flex";
+        }
+
+        function closeAddress() {
+            var addressModal = document.getElementById("addressModal");
+            addressModal.style.display = "none";
+        }
+
+        function submitForm() {
+            alert("Спасибо за ваш отзыв!");
+            closeForm();
+        }
+
+        function acctptButton() {
+            alert("Теперь вы можете пользоваться сервисом MOS.CAR удачных поездок :D ");
+            closeForm();
+        }
+    </script>
+    <footer>
+        <p>&copy; 2023 MOS.CAR / все права защищены / Семенченко Глеб Дмитриевич </p>
+    </footer>
+</body>
+
+</html>
+
+

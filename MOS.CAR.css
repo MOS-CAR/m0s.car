@@ -1,0 +1,248 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.header {
+    background: linear-gradient(to right, black, white, #a90b0b);
+    color: #ffffff;
+    text-align: center;
+    padding: 40px 0;
+    overflow: hidden;
+    opacity: 0;
+    animation: fadeInHeader 2s ease-in-out forwards;
+}
+
+
+.header h1.display-3 {
+    font-size: 3em;
+    position: relative;
+    display: inline-block;
+    color: #c40101;
+    overflow: hidden;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.header h1.display-3::before {
+    content: "MOS.CAR";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to left, #8e0909, #000000);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: moveShine 10s linear infinite;
+    background-size: 200% 100%;
+}
+
+@keyframes moveShine {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes fadeInHeader {
+    to {
+        opacity: 1;
+    }
+}
+
+.header p,
+.navigation {
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInDown 2s ease-in-out forwards;
+}
+
+.navigation ul {
+    list-style: none;
+    padding: 0;
+    opacity: 0;
+    animation: fadeInDown 2s ease-in-out 1s forwards;
+}
+
+.navigation ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigation a:hover {
+    color: #ecf0f1;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.features, .highlights, .about-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+.feature, .highlight, .about-section {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 50px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border: 2px solid #a90b0b; 
+}
+
+.feature h2, .highlight h2, .about-section h2 {
+    border-bottom: 2px solid #a90b0b;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.img {max-width: 100%}
+
+.carbon{
+    background-image: url('carbon.jpeg') ;
+    background-size: cover; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    z-index: 100;
+}
+
+.feature, .highlight {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.feature h2, .highlight h2 , .section-title {
+    color: #ff4f4f;
+    font-size: 24px;
+}
+
+.feature p, .highlight p {
+    color: #555;
+    font-size: 16px;
+}
+
+.features {
+    background-image: url("oboi.JPG");
+    background-size: cover; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    z-index: 100;
+}
+
+.highlights{
+    background-image: url("labbmo.jpeg");
+    background-size: cover; 
+    background-color: rgba(255, 255, 255, 0.8); 
+    z-index: 100;
+}
+
+.rental-form h2, .about-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.about-section p {
+    font-size: 16px;
+}
+
+footer {
+    background: linear-gradient(to right, #ff4f4f, #a90b0b);
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 16px;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    border-color: black;
+}
+
+.map {
+    width: 80%;
+    height: 80%;
+}
+
+.navigation ul li a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background: linear-gradient(to right, #ff4f4f, #a90b0b);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.navigation ul li a:hover {
+    background: linear-gradient(to right, #a90b0b, #ff4f4f);
+}
+.navigation a.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-right: 20px;
+    background: linear-gradient(to right, #ff4f4f, #a90b0b);
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 16px;
+    transition: background 0.3s ease-in-out;
+}
+
+.navigation a.btn:hover {
+    background: linear-gradient(to right, #a90b0b, #ff4f4f);
+}
+
+.avtor {
+    letter-spacing: 4px;
+    text-align: center;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="avtopark.css">
+   <title>Автопарк MOS.CAR</title>
+</head>
+<body>
+
+    <header>
+        <h1 class="head-h1">Автопарк MOS.CAR</h1>
+        <p class="head-p">Здесь вы можете ознакомиться с премиальным автопарком нашей компании</p>
+        <button id="goToHomePageButton">На главную страницу</button>
+    </header>
+
+    <script>
+        document.getElementById('goToHomePageButton').addEventListener('click', function () {
+            window.location.href = 'index.html';
+        });
+        </script>
+
+    <section class="car-gallery">
+        <div class="car">
+            <img src="rolls.jpg" alt="Автомобиль 1">
+            <p class="avto">Rolls-Royce Cullinan</p>
+        </div>
+        <div class="car">
+            <img src="maybach.jpg" alt="Автомобиль 2">
+            <p class="avto">Mercedes-Benz Maybach S680</p>
+        </div>
+        <div class="car">
+            <img src="1200x900n.jpeg" alt="Автомобиль 3">
+            <p class="avto">BMW M5 Competition</p>
+        </div>
+        <div class="car">
+            <img src="huracan.jpeg" alt="Автомобиль 4">
+            <p class="avto">Lamborgini Huracan Perfomante</p>
+        </div>
+        <div class="car">
+            <img src="amgGT.jpg" alt="Автомобиль 5">
+            <p class="avto">Mercedes AMG GT E-perfomance</p>
+        </div>
+    </div>
+    </section>
+    <div class="side-info">
+        <div class="side-photo">
+            <img src="iphone21.png" alt="Фотография">
+        </div>
+    </div>
+</div>
+<section class="text-in">
+<p class="text">Удобный процесс бронирования!</p>
+<p class="text-p">Вам понадобится только телефон!</p>
+</section>
+
+</body>
+</html>
